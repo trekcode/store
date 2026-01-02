@@ -3,11 +3,11 @@ const products = [
   {
     id: 1,
     title: "Wireless Headphones",
-    description: "High quality wireless headphones for music lovers...",
+    description: "Wireless Charger iPhone Charging Station: 3 in 1 Charger Stand Multiple Devices for Apple - iPhone 17 16e 16 15 14 Pro Max 13 12 11 - Watch 10 9 8 7 6 5 4 3 2 SE and Ultra Series - Airpods 4 3 Pro",
     price: "$59.99",
     category: "electronics",
-    images: ["https://via.placeholder.com/220x180?text=Headphones1", "https://via.placeholder.com/220x180?text=Headphones2"],
-    affiliateLink: "#"
+    images: ["wireless.jpeg", "wireless2.jpg"],
+    affiliateLink: "https://amzn.to/3N3PIQE"
   },
   {
     id: 2,
