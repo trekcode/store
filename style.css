@@ -1,0 +1,197 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Layout */
+body {
+  display: flex;
+  min-height: 100vh;
+}
+
+#sidebar {
+  width: 220px;
+  background-color: #1a1a1a;
+  color: white;
+  padding: 20px;
+  flex-shrink: 0;
+}
+
+#sidebar h2 {
+  margin-bottom: 15px;
+}
+
+#sidebar ul li {
+  list-style: none;
+  margin-bottom: 10px;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+#sidebar ul li:hover, #sidebar ul li.active {
+  background-color: #444;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+}
+
+#search-container {
+  margin-bottom: 20px;
+}
+
+#search-input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Products Grid */
+#products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* Product Card */
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: white;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Carousel */
+.product-images {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.product-images img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: none;
+}
+
+.product-images img.active {
+  display: block;
+}
+
+/* Product Info */
+.product-info {
+  padding: 10px;
+}
+
+.product-info h3 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.product-info p {
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+.read-more {
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Price + Affiliate Button */
+.price-btn-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price-btn-container .price {
+  font-weight: bold;
+  color: #e67e22;
+}
+
+.price-btn-container .affiliate-btn {
+  background-color: #ff9900;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.price-btn-container .affiliate-btn:hover {
+  background-color: #cc7a00;
+}
+
+/* Load More Button */
+#load-more-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#load-more-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 6px;
+  border: none;
+  background-color: #1a1a1a;
+  color: white;
+}
+
+#load-more-btn:hover {
+  background-color: #444;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  background-color: #1a1a1a;
+  color: white;
+  position: fixed;
+  bottom: 0;
+}
+
+/* Mobile Optimization */
+@media screen and (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  #sidebar {
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+  }
+
+  #sidebar ul {
+    display: flex;
+    gap: 10px;
+  }
+
+  #sidebar ul li {
+    flex-shrink: 0;
+  }
+
+  #products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+}
